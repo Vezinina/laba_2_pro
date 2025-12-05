@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Системный мониторинг - Панель управления</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1><i class="fas fa-tachometer-alt"></i> Системный мониторинг</h1>
+            <p class="subtitle">Панель управления системными компонентами</p>
+        </div>
+        <div class="header-stats">
+            <div class="stat">
+                <span class="stat-label">Активные виджеты:</span>
+                <span id="widget-count" class="stat-value">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Время работы:</span>
+                <span id="uptime" class="stat-value">00:00:00</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <div class="widget-controls">
+                <h3><i class="fas fa-plus-circle"></i> Добавить виджет</h3>
+                <div class="control-group">
+                    <button id="add-todo" class="control-btn">
+                        <i class="fas fa-tasks"></i> Задачи системы
+                    </button>
+                    <button id="add-quote" class="control-btn">
+                        <i class="fas fa-quote-right"></i> Цитата дня
+                    </button>
+                    <button id="add-weather" class="control-btn">
+                        <i class="fas fa-cloud-sun"></i> Погода
+                    </button>
+                    <button id="add-system" class="control-btn">
+                        <i class="fas fa-desktop"></i> Мониторинг системы
+                    </button>
+                </div>
+                
+                <div class="dashboard-controls">
+                    <h3><i class="fas fa-cog"></i> Управление панелью</h3>
+                    <button id="reset-layout" class="control-btn secondary">
+                        <i class="fas fa-th"></i> Сбросить расположение
+                    </button>
+                    <button id="save-state" class="control-btn secondary">
+                        <i class="fas fa-save"></i> Сохранить состояние
+                    </button>
+                    <button id="clear-all" class="control-btn secondary" style="background: var(--danger-color);">
+                        <i class="fas fa-trash"></i> Удалить все
+                    </button>
+                </div>
+                
+                <div class="instructions">
+                    <h4><i class="fas fa-info-circle"></i> Инструкция</h4>
+                    <p>• Нажмите на заголовок виджета для сворачивания</p>
+                    <p>• Закрыть виджет можно через меню в правом верхнем углу</p>
+                    <p>• Перетаскивайте виджеты, удерживая заголовок</p>
+                    <p>• Кнопка "Удалить все" полностью очистит панель</p>
+                </div>
+            </div>
+        </aside>
+
+        <section class="dashboard-container">
+            <div class="dashboard-header">
+                <h2><i class="fas fa-th-large"></i> Панель виджетов</h2>
+                <div class="dashboard-actions">
+                    <span id="active-widgets">Нет активных виджетов</span>
+                </div>
+            </div>
+            
+            <div id="dashboard" class="dashboard">
+                <div class="empty-state">
+                    <i class="fas fa-th-large fa-3x"></i>
+                    <h3>Панель управления пуста</h3>
+                    <p>Добавьте виджеты с помощью панели слева</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Системный мониторинг &copy; 2023 | Все компоненты управления защищены</p>
+        <p class="footer-links">
+            <span id="system-status" class="status-active"><i class="fas fa-circle"></i> Система активна</span>
+            <span id="last-update">Последнее обновление: --:--:--</span>
+        </p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
