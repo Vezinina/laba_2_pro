@@ -69,15 +69,7 @@ export default class Dashboard {
                         order: this.widgets.size
                     });
                     break;
-                    
-                case 'weather':
-                    widget = new WeatherWidget({
-                        ...config,
-                        title: config.title || 'Погода',
-                        position: position,
-                        order: this.widgets.size
-                    });
-                    break;
+                
                     
                 case 'system':
                     widget = new SystemMonitorWidget({
