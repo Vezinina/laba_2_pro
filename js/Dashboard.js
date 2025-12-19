@@ -1,7 +1,6 @@
 // Импорты
 import ToDoWidget from './ToDoWidget.js';
 import QuoteWidget from './QuoteWidget.js';
-import WeatherWidget from './WeatherWidget.js';
 import SystemMonitorWidget from './SystemMonitorWidget.js';
 
 /**
