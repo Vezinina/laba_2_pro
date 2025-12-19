@@ -55,13 +55,6 @@ class SystemMonitorApp {
             }
         });
         
-        document.getElementById('add-weather').addEventListener('click', () => {
-            if (this.dashboard) {
-                this.dashboard.addWidget('weather');
-                this.showNotification('Виджет погоды добавлен', 'success');
-            }
-        });
-        
         document.getElementById('add-system').addEventListener('click', () => {
             if (this.dashboard) {
                 this.dashboard.addWidget('system');
